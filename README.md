@@ -1,10 +1,12 @@
+使用方法：将脚本上传到目标并执行
+
 powershell一句话命令
 
 Just one line powershell command
 
 ————————————————————————————————————————————
 
-Get-ChildItem -Path "C:\\" -Recurse -Include "*.exe" -ErrorAction SilentlyContinue | ForEach-Object {$acl = icacls $_.FullName | Out-String; if ($acl.Contains($env:USERNAME)) {$acl | Select-String -Pattern $env:USERNAME}}
+Get-ChildItem -Path "C:\\" -Recurse -Include *.exe,*.ps1,*.bat -ErrorAction SilentlyContinue | ForEach-Object {$acl = icacls $_.FullName | Out-String; if ($acl.Contains($env:USERNAME)) {$acl | Select-String -Pattern $env:USERNAME}}
 
 ————————————————————————————————————————————
 
