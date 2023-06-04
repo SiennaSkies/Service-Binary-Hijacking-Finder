@@ -1,8 +1,10 @@
 使用方法：将脚本上传到目标并执行
 
-powershell一句话命令
+powershell -ep bypass -c ".\find_SBH.ps1"
 
-Just one line powershell command
+也可以以powershell命令的形式执行
+
+It can also be executed in the form of a PowerShell command.
 
 ————————————————————————————————————————————
 
@@ -18,6 +20,10 @@ To make up for the shortcoming that tools like PowerUp and PrivescCheck often pe
 
 Use case: It is highly practical for finding service hijacks in exams such as OSCP, but its performance in real penetration testing remains to be observed.
 
-使用方法：直接复制命令，并在powershell中运行即可
+具体的盘符、文件格式，请使用者依据需求灵活变更
+
+Regarding specific drive letters and file formats, users should adjust them according to their needs.
+
+示例：
 
 ![image](https://github.com/SiennaSkies/Service-Binary-Hijacking-Finder/assets/105592340/ef56d799-82e0-4c1a-b710-28e44701f011)
