@@ -2,11 +2,11 @@ powershell一句话命令
 
 Just one line powershell command
 
-————————————————————————————————————————————————————————
+————————————————————————————————————————————
 
 Get-ChildItem -Path "C:\\" -Recurse -Include "*.exe" -ErrorAction SilentlyContinue | ForEach-Object {$acl = icacls $_.FullName | Out-String; if ($acl.Contains($env:USERNAME)) {$acl | Select-String -Pattern $env:USERNAME}}
 
-————————————————————————————————————————————————————————
+————————————————————————————————————————————
 
 为弥补PowerUp、PrivescCheck等工具在筛查可劫持程序的binary文件时常常表现不佳的缺憾，编写了这条powershell命令
 
