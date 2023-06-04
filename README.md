@@ -4,7 +4,7 @@ Just one line powershell command
 
 ————————————————————————————————————————————————————————
 
-Get-ChildItem -Path "C:\" -Recurse -Include "*.exe" -ErrorAction SilentlyContinue | ForEach-Object {$acl = icacls $_.FullName | Out-String; if ($acl.Contains($env:USERNAME)) {$acl | Select-String -Pattern $env:USERNAME}}
+Get-ChildItem -Path "C:\\" -Recurse -Include "*.exe" -ErrorAction SilentlyContinue | ForEach-Object {$acl = icacls $_.FullName | Out-String; if ($acl.Contains($env:USERNAME)) {$acl | Select-String -Pattern $env:USERNAME}}
 
 ————————————————————————————————————————————————————————
 
